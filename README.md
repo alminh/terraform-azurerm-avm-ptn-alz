@@ -591,7 +591,7 @@ The key of this map is the assignment name, and the value is an object with opti
 - `non_compliance_message` - (Optional) A set of non compliance message objects to use for the policy assignment. Each object has the following properties:
   - `message` - (Required) The non compliance message.
   - `policy_definition_reference_id` - (Optional) The reference id of the policy definition to use for the non compliance message.
-- `parameters` - (Optional) The parameters to use for the policy assignment. The map key is the parameter name and the value is an JSON object containing a single `Value` attribute with the values to apply. This to mitigate issues with the Terraform type system. E.g. `{ defaultName = jsonencode({Value = \"value\"}) }`.
+- `parameters` - (Optional) The parameters to use for the policy assignment. The map key is the parameter name and the value is an JSON object containing a single `value` attribute with the values to apply. This to mitigate issues with the Terraform type system. E.g. `{ defaultName = jsonencode({value = \"value\"}) }`.
 - `resource_selectors` - (Optional) A list of resource selector objects to use for the policy assignment. Each object has the following properties:
   - `name` - (Required) The name of the resource selector.
   - `selectors` - (Optional) A list of selector objects to use for the resource selector. Each object has the following properties:
